@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Proyecto | Parcial 2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introducción
 
-## Available Scripts
+### Descripción
 
-In the project directory, you can run:
+Sistema Web de Registros para Conferencias
 
-### `npm start`
+### Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Registro de Usuarios
+* Validación de Registro
+* Control de Acceso a Usuarios
+* Lectura de Códigos QR
+* Uso de Cámara Celular
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Iniciar el proyecto
 
-### `npm test`
+Crea una nueva carpeta para tu proyecto y dentro de la carpeta ejecuta el
+siguiente comando en tu terminal.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm init -i
+```
 
-### `npm run build`
+Después de ejecutar el comando se va a generar dentro de la carpeta el
+archivo `package.json` este archivo es el que utiliza `npm` para identificar los
+paquetes necesarios de tu proyecto.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+El contenido de `package.json`  será:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```json
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Base de Datos
 
-### `npm run eject`
+La base de datos del proyecto se encuentra en un cluster online de MongoDB.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Iniciar el proyecto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Una vez instalados los módulos necesarios, ejecute el siguiente comando
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+El proyecto se inicia por defecto en el puerto `80` por lo que en su buscador
+deberá ingresar la siguiente dirección http://localhost
 
-## Learn More
+## Pruebas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Dentro de las carpetas `api` y `client` se encuentra la carpeta `test`. Cada
+una cuenta con un archivo `requests.http` para realizar peticiones HTTP a la API
+y al Cliente. 

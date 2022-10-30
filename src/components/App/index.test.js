@@ -1,7 +1,7 @@
 /*
  *  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # Proyecto | Parcial 2
- * Style | `index`
+ * Tests | `App`
  *
  * A01027543 | Santiago Hernández Guerrero
  * A01657103 | Daniel Bakas Amuchástegui
@@ -12,6 +12,13 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
-body {
-    margin: 0;
-}
+//* Imports
+// Package Imports
+import { render } from "@testing-library/react";
+// Project Imports
+import { App } from "./index";
+
+//* Main
+describe("App", () => {
+    it("render", () => {render(App);});
+});

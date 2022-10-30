@@ -1,17 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/*
+ *  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ * # Proyecto | Parcial 2
+ * System | `index.js`
+ *
+ * A01027543 | Santiago Hernández Guerrero
+ * A01657103 | Daniel Bakas Amuchástegui
+ *
+ * Oct 31, 2022
+ *
+ * Laboratorio de Aplicaciones Web | Prof. Luis José González
+ * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ */
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//* Imports
+// Package Imports
+import "bootstrap/dist/css/bootstrap.min.css";
+import { createRoot } from "react-dom/client";
+// Project Imports
+import "./index.css";
+import { App } from "./components/App/index.js";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//* Main
+const element = document.getElementById("root");
+const root = createRoot(element);
+root.render(<App/>);

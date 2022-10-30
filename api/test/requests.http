@@ -1,0 +1,33 @@
+### /api | GET
+GET http://localhost/api/ HTTP/1.1
+
+### /api/machine | GET
+GET http://localhost/api/machine HTTP/1.1
+
+### /api/users | GET
+GET http://localhost/api/users HTTP/1.1
+
+### /api/users | POST
+POST http://localhost/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "code": "1010"
+}
+
+### /api/users:id | HEAD
+HEAD http://localhost/api/users/ HTTP/1.1
+
+### /api/users:id | GET
+GET http://localhost/api/users/6324f53388db679a3278676d HTTP/1.1
+
+### /api/users/:id | PUT
+PUT http://localhost/api/users/6326b604cb6347939ab42122 HTTP/1.1
+Content-Type: application/json
+
+{
+  "names": "Dan"
+}
+
+### /api/users/:id | DELETE
+DELETE http://localhost/api/users/6324f53388db679a3278676d HTTP/1.1

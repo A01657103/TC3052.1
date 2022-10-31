@@ -26,6 +26,7 @@ const Lectura = (props) => {
     const { show, setShow } = props;
     // Hooks
     const [data, setData] = useState({});
+    const [isValid, setIsValid] = useState(true);
 
     // Callbacks
     const handleAdmission = async () => {
@@ -42,12 +43,20 @@ const Lectura = (props) => {
     const handleResult = async (res) => {
         if (res) {
             const registro = await consultarRegistro(res.text);
+            if(registro){
+                setData(registro);
+                setIsValid(true);
+            }
+            else{
+                setIsValid(false);
+            }
             console.log(registro);
-            setData(registro);
+            
         }
     };
+    console.log(data);
     const { admitted, fullName, mail, qr, tel } = data;
-    return (
+    return ( 
         <>
             <Modal centered show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
@@ -64,7 +73,11 @@ const Lectura = (props) => {
                             <img width={"100%"} src={qr} alt={"QR Code"}/>
                         </>)
                         :
+                        <>
                         <QrReader onResult={handleResult}/>
+                        {!isValid && <h4>QR no válido</h4>}
+                        </>
+                        
                     }
                 </Modal.Body>
                 {qr && (

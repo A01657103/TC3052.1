@@ -40,7 +40,7 @@ const HomePage = () => {
         <Container fluid className="text-center p-5"
                    style={{ height: "100vh" }}>
             <Card className="m-auto"
-                  style={{ width: "50%" }}>
+                  style={{ width: "75%" }}>
                 <Card.Body>
                     <Card.Title><h1>Conferencia</h1></Card.Title>
                     <Button
